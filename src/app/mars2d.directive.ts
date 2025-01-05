@@ -15,7 +15,7 @@ export class Mars2dDirective implements OnInit {
     let configUrl = 'config/config.json'
     mars2d.Util.fetchJson({ url: configUrl })
       .then((data: any) => {
-        var mapOptions = data.mars2d
+        var mapOptions = data
         // 创建三维地球场景
         const map = new mars2d.Map(this.el.nativeElement, mapOptions)
         this.onMapload(map)
